@@ -1,3 +1,7 @@
+.bigTitle {
+   font-size: 35px;
+}
+
 body {
     background: white;
     background-image: url("images/backgroundPortfolio.png");
@@ -5,8 +9,14 @@ body {
     background-repeat: repeat;
     background-size: 100% auto;
     background-attachment: fixed;
+    font-family: Corbel;
+    font-size: 18px;
+    padding: 20px;
 }
 
+
+
+/*tab stuff down here*/
 /* Style the tab */
 .tab {
     overflow: hidden;
@@ -21,6 +31,8 @@ body {
     cursor: pointer;
     padding: 14px 16px;
     transition: 0.3s;
+    margin-right: 15px;
+    font-size: 18px;
 }
 
 /* Change background color of buttons on hover */
@@ -31,7 +43,7 @@ body {
 
 /* Create an active/current tablink class */
 .tab button.active {
-    background-color: rgba(125, 58, 193, 0.70);
+    background-color: rgba(141, 68, 216, 0.71);
     border-radius: 4px;
 }
 
@@ -41,17 +53,14 @@ body {
     padding: 6px 12px;
     border-top: none;
     background: rgba(255, 237, 241, 0.55);
-    border: solid 2px rgba(125, 58, 193, 0.78);
     border-radius: 8px;
 }
 
+
+
+/*blog stuff down here*/
 * {
     box-sizing: border-box;
-}
-
-body {
-    font-family: Arial;
-    padding: 20px;
 }
 
 /* Header/Blog Title */
@@ -78,7 +87,7 @@ body {
 
 /* Fake image */
 .fakeimg {
-    background-color: #aaa;
+    background-color: #ffc7c7;
     width: 100%;
     padding: 20px;
 }
@@ -99,6 +108,7 @@ div.scroll-container img {
     background-color: #fff6f6;
     padding: 20px;
     margin-top: 20px;
+    border-radius: 4px;
 }
 
 /* Clear floats after the columns */
@@ -124,6 +134,9 @@ div.scroll-container img {
     }
 }
 
+
+
+/*who am i page down here*/
 .mintSprite {
     height: 150px;
     float: right;
@@ -131,4 +144,48 @@ div.scroll-container img {
     right: 5px;
     position: fixed;
     z-index: 3;
+}
+
+
+
+/*learning outcomes page down here*/
+/* Style the button that is used to open and close the collapsible content */
+.collapsible {
+    background-color: #ffbfbf;
+    color: #472061;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 20px;
+    text-align: center;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.collapsible.active, .collapsible:hover {
+    background-color: #dfa1dc;
+    color: #ffffff
+}
+
+/* Style the collapsible content. Note: hidden by default */
+.content {
+    padding: 0 18px;
+    display: none;
+    overflow: hidden;
+    background-color: rgba(251, 191, 244, 0.64);
+}
+
+.lonk {
+    width: 200px;
+    margin: 20px;
+}
+
+.lonk:hover {
+    animation: rotateLonk 3s infinite
+}
+
+@keyframes rotateLonk {
+    100% {transform: rotate(360deg);}
 }
