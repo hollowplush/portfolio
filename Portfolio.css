@@ -177,6 +177,17 @@ div.scroll-container img {
     background-color: rgba(251, 191, 244, 0.64);
 }
 
+div.scroll-container2 {
+    background-color: rgb(251, 191, 244);
+    overflow: auto;
+    white-space: nowrap;
+    padding: 5px;
+}
+
+div.scroll-container2 img {
+    height: 200px;
+}
+
 .lonk {
     width: 200px;
     margin: 20px;
