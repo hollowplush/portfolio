@@ -1,47 +1,61 @@
-    //homepage open by default
-    window.onload = function() {
-    openTab(event = null, 'home');
+// homepage open by default
+window.onload = function() {
+    openTab(null, 'home');
+};
+
+const squeakSound = new Audio("sounds/Untitled video - Made with Clipchamp (1).mp3");
+
+let count = 0;
+
+// Get the correct elements
+const koreModel = document.getElementById("koreModelJS");
+const countDisplay = document.getElementById("squishCounter");
+
+// Add the click listener once
+koreModel.addEventListener("mousedown", () => {
+    // update squish counter
+    count++;
+    countDisplay.textContent = "squish counter: " + count;
+
+    // play sound
+    squeakSound.currentTime = 0;
+    squeakSound.play();
+});
+
+// tab stuff
+function openTab(evt, tabName) {
+    var i, tabcontent, tablinks;
+
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
     }
 
-    function openTab(evt, tabName) {
-        var i, tabcontent, tablinks;
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].classList.remove("active");
+    }
 
-        // Hide all tab contents
-        tabcontent = document.getElementsByClassName("tabcontent");
-        for (i = 0; i < tabcontent.length; i++) {
-            tabcontent[i].style.display = "none";
-        }
+    document.getElementById(tabName).style.display = "block";
 
-        // Remove 'active' class from all tab links
-        tablinks = document.getElementsByClassName("tablinks");
-        for (i = 0; i < tablinks.length; i++) {
-            tablinks[i].classList.remove("active");
-        }
+    if (evt) {
+        evt.currentTarget.classList.add("active");
+    } else {
+        document.querySelector(`.tablinks[onclick*="${tabName}"]`).classList.add("active");
+    }
+}
 
-        // Show the selected tab content
-        document.getElementById(tabName).style.display = "block";
+// collapsible in learning outcomes tab
+var coll = document.getElementsByClassName("collapsible");
 
-        // Add 'active' class to the clicked tab
-        if (evt) {
-            evt.currentTarget.classList.add("active");
+for (var i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.display === "block") {
+            content.style.display = "none";
         } else {
-            // If there's no event (like on load), manually activate the first tab
-            document.querySelector(`.tablinks[onclick*="${tabName}"]`).classList.add("active");
+            content.style.display = "block";
         }
-    }
-
-    //collapsible in learning outcomes tab
-    var coll = document.getElementsByClassName("collapsible");
-    var i;
-
-    for (i = 0; i < coll.length; i++) {
-        coll[i].addEventListener("click", function() {
-            this.classList.toggle("active");
-            var content = this.nextElementSibling;
-            if (content.style.display === "block") {
-                content.style.display = "none";
-            } else {
-                content.style.display = "block";
-            }
-        });
-    }
+    });
+}
