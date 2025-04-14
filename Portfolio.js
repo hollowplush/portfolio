@@ -3,6 +3,7 @@ window.onload = function() {
     openTab(null, 'home');
 };
 
+//kore model stuff
 const squeakSound = new Audio("sounds/Untitled video - Made with Clipchamp (1).mp3");
 
 let count = 0;
