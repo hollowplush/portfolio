@@ -1,5 +1,6 @@
-.bigTitle {
-   font-size: 35px;
+.ishyLogo {
+    width: 20%;
+    padding-bottom: 10px;
 }
 
 body {
@@ -62,18 +63,21 @@ body {
     transition: 0.3s;
     margin-right: 15px;
     font-size: 18px;
+    color: rgba(141, 69, 214, 0.89);
 }
 
 /* Change background color of buttons on hover */
 .tab button:hover {
     background-color: rgba(147, 112, 219, 0.63);
     border-radius: 4px;
+    color: white;
 }
 
 /* Create an active/current tablink class */
 .tab button.active {
     background-color: rgba(141, 68, 216, 0.71);
     border-radius: 4px;
+    color: white;
 }
 
 /* Style the tab content */
@@ -277,4 +281,54 @@ div.scroll-container2 img {
 .lonk {
     height: 200px;
     margin: 20px;
+}
+
+/*project 1 down here*/
+.project1 {
+    display: flex;
+    width: 100%;
+    padding: 40px;
+    gap: 20px;
+}
+
+.rightProjectColumn {
+    width: 40%;
+    float: right;
+}
+
+.rightProjectImage {
+    width: 40%;
+    border-radius: 8px;
+    float: right;
+}
+
+.leftProjectImage {
+    width: 40%;
+    border-radius: 8px;
+    float: left;
+}
+
+.leftProjectColumn {
+    width: 40%;
+    float: left;
+}
+
+.goBackButton {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    margin-right: 15px;
+    font-size: 18px;
+    text-decoration: none;
+    color: rgba(141, 69, 214, 0.89);
+}
+
+.goBackButton:hover {
+    background-color: rgba(147, 112, 219, 0.63);
+    border-radius: 4px;
+    color: white;
 }
