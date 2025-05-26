@@ -247,7 +247,6 @@ div.scroll-container img {
     padding: 18px;
     width: 100%;
     border: none;
-    text-align: left;
     outline: none;
     font-size: 20px;
     text-align: center;
@@ -284,6 +283,13 @@ div.scroll-container2 img {
 }
 
 /*project 1 down here*/
+.project_title {
+    display: block;
+    text-align: center;
+    width: 50%;
+    margin: auto;
+}
+
 .project1 {
     display: flex;
     width: 100%;
@@ -313,6 +319,63 @@ div.scroll-container2 img {
     float: left;
 }
 
+.bitter_choco_decoration {
+    display: block;
+    margin: auto;
+}
+
+.project2_content {
+    display: flex;
+    flex: 1 0 40%;
+    padding: 20px;
+}
+
+.project2_content_reverse {
+    display: flex;
+    flex: 0 1 40%;
+    padding: 20px;
+}
+
+.project2_paragraph {
+    display: flex;
+    flex: 0 1 40%;
+    padding: 20px;
+}
+
+.project2_paragraph_reverse {
+    display: flex;
+    flex: 1 0 40%;
+    padding: 20px;
+}
+
+.project3 {
+    display: flex;
+}
+
+.project3_content_left {
+    display: flex;
+    flex: 1 0 0 30%;
+    padding: 20px;
+}
+
+.project3_content_mid {
+    display: flex;
+    flex: 0 1 0 30%;
+    padding: 20px;
+}
+
+.project3_content_right {
+    display: flex;
+    flex: 0 0 1 30%;
+    padding: 20px;
+}
+
+.big_kore_gif {
+    display: block;
+    margin: auto;
+    width: 70%;
+}
+
 .goBackButton {
     background-color: inherit;
     float: left;
@@ -329,6 +392,26 @@ div.scroll-container2 img {
 
 .goBackButton:hover {
     background-color: rgba(147, 112, 219, 0.63);
+    border-radius: 4px;
+    color: white;
+}
+
+.goBackButton2 {
+    background-color: none;
+    text-shadow: -1px -1px 0 #F02F91FF, 1px -1px 0 #F02F91FF, -1px 1px 0 #F02F91FF, 1px 1px 0 #F02F91FF;
+    cursor: pointer;
+    padding: 20px;
+    transition: 0.3s;
+    font-size: 50px;
+    text-decoration: none;
+    color: rgb(255, 172, 194);
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.goBackButton2:hover {
+    background-color: rgb(255, 137, 162, 0.63);
     border-radius: 4px;
     color: white;
 }

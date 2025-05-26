@@ -3,7 +3,7 @@ window.onload = function() {
     openTab(null, 'home');
 };
 
-//kore model stuff
+////// kore model stuff
 const squeakSound = new Audio("sounds/Untitled video - Made with Clipchamp (1).mp3");
 
 let count = 0;
@@ -23,7 +23,7 @@ koreModel.addEventListener("mousedown", () => {
     squeakSound.play();
 });
 
-// tab stuff
+////// tab stuff
 function openTab(evt, tabName) {
     var i, tabcontent, tablinks;
 
@@ -46,13 +46,13 @@ function openTab(evt, tabName) {
     }
 }
 
-// collapsible in learning outcomes tab
-var coll = document.getElementsByClassName("collapsible");
+/////// collapsible in learning outcomes tab
+const coll = document.getElementsByClassName("collapsible");
 
-for (var i = 0; i < coll.length; i++) {
+for (let i = 0; i < coll.length; i++) {
     coll[i].addEventListener("click", function() {
         this.classList.toggle("active");
-        var content = this.nextElementSibling;
+        let content = this.nextElementSibling;
         if (content.style.display === "block") {
             content.style.display = "none";
         } else {
