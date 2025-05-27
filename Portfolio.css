@@ -282,12 +282,51 @@ div.scroll-container2 img {
     margin: 20px;
 }
 
+.projectGrid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* center rows */
+    gap: 20px;               /* gap between items */
+    padding: 20px;
+    align-items: center;     /* optional: vertical center if height is set */
+}
+
+.projectLogo {
+    width: calc(50% - 20px); /* 2 per row, accounting for gap */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    min-height: 100px;
+    text-align: center;
+}
+
+.projectLogo:hover {
+    background-color: #ffc2c2;
+}
+
+.projectLogo > img {
+    width: 90%;
+    height: auto;
+    padding-bottom: 30px;
+}
+
 /*project 1 down here*/
 .project_title {
     display: block;
     text-align: center;
     width: 50%;
     margin: auto;
+    padding-bottom: 20px;
+}
+
+.project_intro {
+    display: block;
+    text-align: center;
+    width: 60%;
+    margin: auto;
+    padding: 20px;
+    font-size: 1.5em;
 }
 
 .project1 {
@@ -315,7 +354,7 @@ div.scroll-container2 img {
 }
 
 .leftProjectColumn {
-    width: 40%;
+    width: 60%;
     float: left;
 }
 
@@ -326,25 +365,27 @@ div.scroll-container2 img {
 
 .project2_content {
     display: flex;
-    flex: 1 0 40%;
+    flex: 1 0 auto;
     padding: 20px;
 }
 
 .project2_content_reverse {
     display: flex;
-    flex: 0 1 40%;
+    flex: 0 1 auto;
     padding: 20px;
 }
 
 .project2_paragraph {
     display: flex;
-    flex: 0 1 40%;
+    flex-direction: row; /* makes <p> elements align horizontally */
+    gap: 20px; /* adds horizontal spacing between them */
     padding: 20px;
 }
 
 .project2_paragraph_reverse {
     display: flex;
-    flex: 1 0 40%;
+    flex-direction: row; /* makes <p> elements align horizontally */
+    gap: 20px; /* adds horizontal spacing between them */
     padding: 20px;
 }
 
@@ -397,7 +438,7 @@ div.scroll-container2 img {
 }
 
 .goBackButton2 {
-    background-color: none;
+    background-color: transparent;
     text-shadow: -1px -1px 0 #F02F91FF, 1px -1px 0 #F02F91FF, -1px 1px 0 #F02F91FF, 1px 1px 0 #F02F91FF;
     cursor: pointer;
     padding: 20px;
