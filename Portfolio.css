@@ -90,6 +90,47 @@ body {
 }
 
 /*homepage stuff down here*/
+.drawing_container {
+    position: fixed;
+    width: 50%;
+    height: 100%
+}
+
+.container {
+    height: 100%;
+    display: flex;
+}
+
+#toolbar {
+    position: fixed;
+    left: -1px;
+    flex-direction: column;
+    padding: 5px;
+    width: 70px;
+    background-color: rgba(141, 68, 216, 0.71);
+    border-radius: 4px;
+}
+
+#toolbar * {
+    margin-bottom: 6px;
+}
+
+#toolbar label {
+    font-size: 12px;
+}
+
+#toolbar input {
+    width: 100%;
+}
+
+#toolbar button {
+    background-color: #1565c0;
+    border: none;
+    border-radius: 4px;
+    color:white;
+    padding: 2px;
+}
+
 .squishText {
     text-align: center;
     margin-top: 100px;
@@ -327,6 +368,7 @@ div.scroll-container2 img {
     margin: auto;
     padding: 20px;
     font-size: 1.5em;
+    color: rgba(141, 69, 214, 0.89);
 }
 
 .project1 {
