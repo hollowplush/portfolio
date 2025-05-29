@@ -3,22 +3,27 @@ window.onload = function() {
     openTab(null, 'home');
 };
 
-///////////// drawing board
+///////////// drawing board (https://www.youtube.com/watch?v=mRDo-QXVUv8&ab_channel=JavaScriptAcademy)
 const canvas = document.getElementById('drawing-board');
 const toolbar = document.getElementById('toolbar');
 const ctx = canvas.getContext('2d');
 
-const canvasOffsetX = canvas.offsetLeft;
-const canvasOffsetY = canvas.offsetTop;
-
-canvas.width = window.innerWidth - canvasOffsetX;
-canvas.height = window.innerHeight - canvasOffsetY;
-
 let isPainting = false;
 let lineWidth = 5;
-let startX;
-let startY;
 
+// Resize canvas to full screen
+const resizeCanvas = () => {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+};
+resizeCanvas();
+window.addEventListener('resize', resizeCanvas);
+
+// Set default stroke color in input and context
+document.getElementById("stroke").value = "#c625a0";
+ctx.strokeStyle = "#c625a0";
+
+// Toolbar events
 toolbar.addEventListener('click', e => {
     if (e.target.id === 'clear') {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -26,41 +31,47 @@ toolbar.addEventListener('click', e => {
 });
 
 toolbar.addEventListener('change', e => {
-    if(e.target.id === 'stroke') {
+    if (e.target.id === 'stroke') {
         ctx.strokeStyle = e.target.value;
     }
-
-    if(e.target.id === 'lineWidth') {
+    if (e.target.id === 'lineWidth') {
         lineWidth = e.target.value;
     }
-
 });
 
-const draw = (e) => {
-    if(!isPainting) {
-        return;
-    }
+// Drawing logic
+const draw = (x, y) => {
+    if (!isPainting) return;
 
     ctx.lineWidth = lineWidth;
     ctx.lineCap = 'round';
-
-    ctx.lineTo(e.clientX - canvasOffsetX, e.clientY);
+    ctx.lineTo(x, y);
     ctx.stroke();
-}
+};
 
 canvas.addEventListener('mousedown', (e) => {
+    const rect = canvas.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+
     isPainting = true;
-    startX = e.clientX;
-    startY = e.clientY;
+    ctx.beginPath();
+    ctx.moveTo(x, y);
 });
 
-canvas.addEventListener('mouseup', e => {
+canvas.addEventListener('mouseup', () => {
     isPainting = false;
     ctx.stroke();
     ctx.beginPath();
 });
 
-canvas.addEventListener('mousemove', draw);
+canvas.addEventListener('mousemove', (e) => {
+    const rect = canvas.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+
+    draw(x, y);
+});
 
 
 ////// kore model stuff
