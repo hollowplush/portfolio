@@ -138,6 +138,7 @@ body {
 .squishText {
     text-align: center;
     margin-top: 100px;
+    color: rgba(141, 69, 214, 0.89);
 }
 
 .koreModel {
@@ -211,7 +212,13 @@ div.scroll-container img {
     padding: 20px;
     margin-top: 20px;
     border-radius: 7px;
+    color: rgb(67, 33, 103);
 }
+
+.card > h2 {
+    color: rgba(141, 69, 214, 0.89);
+}
+
 
 /* Clear floats after the columns */
 .row:after {
@@ -265,6 +272,7 @@ div.scroll-container img {
 
 .whoAmIContent {
     width: 100%;
+    color: rgb(67, 33, 103);
 }
 
 .kofi {
@@ -380,11 +388,13 @@ div.scroll-container2 img {
     width: 100%;
     padding: 40px;
     gap: 20px;
+    color: rgb(67, 33, 103);
 }
 
 .rightProjectColumn {
     width: 40%;
     float: right;
+    color: rgb(67, 33, 103);
 }
 
 .rightProjectImage {
@@ -402,6 +412,7 @@ div.scroll-container2 img {
 .leftProjectColumn {
     width: 60%;
     float: left;
+    color: rgb(67, 33, 103);
 }
 
 .bitter_choco_decoration {
@@ -413,12 +424,14 @@ div.scroll-container2 img {
     display: flex;
     flex: 1 0 auto;
     padding: 20px;
+    color: rgb(67, 33, 103);
 }
 
 .project2_content_reverse {
     display: flex;
     flex: 0 1 auto;
     padding: 20px;
+    color: rgb(67, 33, 103);
 }
 
 .project2_paragraph {
@@ -426,6 +439,7 @@ div.scroll-container2 img {
     flex-direction: row; /* makes <p> elements align horizontally */
     gap: 20px; /* adds horizontal spacing between them */
     padding: 20px;
+    color: rgb(67, 33, 103);
 }
 
 .project2_paragraph_reverse {
@@ -433,6 +447,7 @@ div.scroll-container2 img {
     flex-direction: row; /* makes <p> elements align horizontally */
     gap: 20px; /* adds horizontal spacing between them */
     padding: 20px;
+    color: rgb(67, 33, 103);
 }
 
 .project3 {
@@ -443,18 +458,21 @@ div.scroll-container2 img {
     display: flex;
     flex: 1 0 0 30%;
     padding: 20px;
+    color: rgb(67, 33, 103);
 }
 
 .project3_content_mid {
     display: flex;
     flex: 0 1 0 30%;
     padding: 20px;
+    color: rgb(67, 33, 103);
 }
 
 .project3_content_right {
     display: flex;
     flex: 0 0 1 30%;
     padding: 20px;
+    color: rgb(67, 33, 103);
 }
 
 .big_kore_gif {
