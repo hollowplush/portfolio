@@ -529,3 +529,12 @@ div.scroll-container2 img {
     border-radius: 4px;
     color: white;
 }
+
+.container {
+    max-width: 50%;
+    margin: 40px auto;
+}
+
+.highlighted_words {
+    color: rgba(141, 69, 214, 0.89);
+}
