@@ -372,6 +372,7 @@ div.scroll-container2 img {
     width: 100vw;
     height: 100vh;
     z-index: 9999;
+    pointer-events: none;
 }
 
 .project_title {
@@ -406,10 +407,24 @@ div.scroll-container2 img {
     color: rgb(67, 33, 103);
 }
 
-.rightProjectImage {
+.image-with-subheader {
     width: 40%;
-    border-radius: 8px;
     float: right;
+    margin-left: 20px; /* optional for spacing */
+}
+
+.rightProjectImage {
+    width: 100%;
+    border-radius: 8px;
+    display: block;
+}
+
+.subheader-above-image {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 6px;
+    color: rgba(141, 69, 214, 0.89);
+    text-decoration: underline;
 }
 
 .leftProjectImage {
@@ -536,5 +551,6 @@ div.scroll-container2 img {
 }
 
 .highlighted_words {
-    color: rgba(141, 69, 214, 0.89);
+    color: rgba(180, 51, 255, 0.89);
+    font-weight: bold;
 }
